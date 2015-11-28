@@ -19,13 +19,13 @@
         <p class="erro"><%= mensagemErro%></p>
         <% }%>
         <h1>Login</h1>
-        <form name="form-login" method="POST" action="Login" >
+        <form name="form-login" method="POST" action="Login" onsubmit="return validar()" >
             <input type="hidden" name="acao" value="login" />
             <label>Apelido/E-mail:</label>
-            <input type="text" name="apelido" value="<%= ape%>" />
+            <input type="text" id="apelido1" name="apelido" value="<%= ape%>" />
             <br />
             <label>Senha:</label>
-            <input type="password" name="senha" value="<%= sen%>" />  
+            <input type="password" id="senha1" name="senha" value="<%= sen%>" />  
             <br />
             <input type="submit" value="Entrar" />
         </form>
